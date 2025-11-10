@@ -1,18 +1,53 @@
 /* styles.css */
 body {
   font-family: Arial, sans-serif;
+  box-sizing: content-box;
+  background-color: rgba(238, 166, 107, 0.543);
+}
+h1 {
+  margin-left: 20px;
 }
 
 .genero-container {
+  
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f8f8f8;
+  
+  
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-
-
+img {
+  height: 200px;
+}
+.genero {
+  padding-left: 10px;
+  display: flex; /* Las pone en línea en lugar de una encima de otra */
+  gap: 30px;
+  overflow-x: scroll; /* Con esto lo que se sale de la pantalla se queda dentro con un scroll */
+  overflow-y: hidden; /* Para que no haya un pequeño scroll que aparece vertical */
+  justify-content: flex-start;
+  
+  
+}
+p {
+  font-weight: bold;
+}
+.tarjeta_pelicula {
+  margin-top: 20px;
+  width: 140px;
+  flex-shrink: 0; /* Esto hace que se junten las películas entre sí como arriba. 
+                  Si no, al ser pocas, se espaciarían por todo el ancho */
+  text-align: center;
+  transition: all .2s linear;
+  /* box-shadow: 9px 4px 16px 0px grey; */
+}
+.tarjeta_pelicula:hover {
+  transform: scale(1.1);
+  
+}
